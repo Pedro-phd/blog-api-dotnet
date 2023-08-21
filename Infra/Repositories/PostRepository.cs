@@ -23,7 +23,6 @@ public class PostRepository : IPostRepository
 
   public async Task<List<Post>> Search(string term)
   {
-    // return await _context.Posts.Where(p => p.Title.ToLower().Contains(term.ToLower())).ToListAsync();
     return await _context.Posts.FromSqlRaw("SELECT * FROM posts WHERE similarity(title, {0}) > 0 ORDER BY similarity(title, {0}) DESC", term)
         .ToListAsync();
   }
@@ -39,7 +38,6 @@ public class PostRepository : IPostRepository
     }
     catch (Exception err)
     {
-      Console.WriteLine("Error ao criar novo post");
       Console.WriteLine(err.Message);
       if (err.InnerException != null)
       {
