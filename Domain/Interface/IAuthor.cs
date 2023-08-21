@@ -1,6 +1,6 @@
 public interface IAuthor
 {
-  Guid Id { get; set; }
+  Guid Id { get; }
   string Name { get; set; }
   string Email { get; set; }
 }

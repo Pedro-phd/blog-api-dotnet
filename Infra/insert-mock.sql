@@ -1,17 +1,18 @@
 -- Inserir autores
-INSERT INTO author (id, name, email)
+INSERT INTO authors (id, name, email)
 VALUES
-  ('a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11', 'Autor 1', 'autor1@example.com'),
-  ('c4ca4238-a0b9-3382-8dcc-509a6f75849b', 'Autor 2', 'autor2@example.com'),
-  ('c81e728d-9d4c-3d8a-5e27-8d5d5f0a9402', 'Autor 3', 'autor3@example.com'),
-  ('eccbc87e-4b5c-37a3-7f5e-8c91f6af5e2b', 'Autor 4', 'autor4@example.com'),
-  ('a87ff679-a2f3-7465-7a7b-8b1fc16b3f4d', 'Autor 5', 'autor5@example.com');
+  ('d86fcbbf-4635-4f91-9d85-03b4bbed79a1', 'Autor 1', 'autor1@example.com'),
+  ('c20e83e2-1f94-421f-8f91-b5ea9e8e0f48', 'Autor 2', 'autor2@example.com'),
+  ('27e01ed5-1c27-4b8b-9b92-7c0ea89c1c6b', 'Autor 3', 'autor3@example.com');
 
--- Inserir postagens relacionadas a autores
+-- Inserir posts relacionados aos autores
 INSERT INTO posts (id, title, slug, content, authorId, thumb)
 VALUES
-  ('f47ac10b-58cc-4372-a567-0e02b2c3d479', 'Título da Postagem 1', 'titulo-postagem-1', 'Conteúdo da postagem 1...', 'a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11', 'thumb-1.jpg'),
-  ('1f0e3dad-9a3c-37eb-3a9b-4ff2e03e5866', 'Título da Postagem 2', 'titulo-postagem-2', 'Conteúdo da postagem 2...', 'c4ca4238-a0b9-3382-8dcc-509a6f75849b', 'thumb-2.jpg'),
-  ('0cc175b9-c0f1-c15e-3ce4-ecbda3abc5ad', 'Título da Postagem 3', 'titulo-postagem-3', 'Conteúdo da postagem 3...', 'c81e728d-9d4c-3d8a-5e27-8d5d5f0a9402', 'thumb-3.jpg'),
-  ('4e732ced-3b7f-48e4-85de-6110aa5b4b5b', 'Título da Postagem 4', 'titulo-postagem-4', 'Conteúdo da postagem 4...', 'eccbc87e-4b5c-37a3-7f5e-8c91f6af5e2b', 'thumb-4.jpg'),
-  ('8e296aeb-9d4c-3190-3e7c-ecbc9fca46e1', 'Título da Postagem 5', 'titulo-postagem-5', 'Conteúdo da postagem 5...', 'a87ff679-a2f3-7465-7a7b-8b1fc16b3f4d', 'thumb-5.jpg');
+  ('2f42ed82-52ad-4fc6-84e9-20bfe3840b1b', 'Título da Postagem 1', 'titulo-postagem-1', 'Conteúdo da postagem 1...', 'd86fcbbf-4635-4f91-9d85-03b4bbed79a1', 'thumb1.jpg'),
+  ('25f7a67a-6c0e-465b-9d1d-58d96a7c76f0', 'Título da Postagem 2', 'titulo-postagem-2', 'Conteúdo da postagem 2...', 'd86fcbbf-4635-4f91-9d85-03b4bbed79a1', 'thumb2.jpg'),
+  
+  ('e4c901d6-2192-475e-af92-58921ca2439c', 'Título da Postagem 3', 'titulo-postagem-3', 'Conteúdo da postagem 3...', 'c20e83e2-1f94-421f-8f91-b5ea9e8e0f48', 'thumb3.jpg'),
+  ('f2d8f1a1-1cc4-414a-9a3b-08bdc879f214', 'Título da Postagem 4', 'titulo-postagem-4', 'Conteúdo da postagem 4...', 'c20e83e2-1f94-421f-8f91-b5ea9e8e0f48', 'thumb4.jpg'),
+  
+  ('0310f5a0-7b82-47ca-9bc9-97efdf5a39ef', 'Título da Postagem 5', 'titulo-postagem-5', 'Conteúdo da postagem 5...', '27e01ed5-1c27-4b8b-9b92-7c0ea89c1c6b', 'thumb5.jpg'),
+  ('19203e95-60b4-4d2c-8d17-20ff1fb17f94', 'Título da Postagem 6', 'titulo-postagem-6', 'Conteúdo da postagem 6...', '27e01ed5-1c27-4b8b-9b92-7c0ea89c1c6b', 'thumb6.jpg');

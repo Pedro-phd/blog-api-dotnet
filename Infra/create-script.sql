@@ -1,6 +1,6 @@
 CREATE EXTENSION pg_trgm;
 
-CREATE TABLE IF NOT EXISTS author (
+CREATE TABLE IF NOT EXISTS authors (
   id UUID PRIMARY KEY,
   name TEXT NOT NULL,
   email TEXT NOT NULL
@@ -13,9 +13,9 @@ CREATE TABLE IF NOT EXISTS posts (
   content TEXT NOT NULL,
   authorId UUID NOT NULL,
   thumb TEXT NOT NULL,
-  FOREIGN KEY (authorId) REFERENCES author(id)
+  FOREIGN KEY (authorId) REFERENCES authors(id)
 );
 
 
 CREATE INDEX post_title ON posts(title);
-CREATE INDEX author_name ON author(name);
+CREATE INDEX author_name ON authors(name);
