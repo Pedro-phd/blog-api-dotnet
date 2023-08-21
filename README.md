@@ -11,7 +11,7 @@
  - [x]  Crud Post's
  - [x] Pesquisa por similaridade nos titulos
  - [x] Crud Author
- - [ ] Pesquisa por similaridade autores
+ - [X] Pesquisa por similaridade nome dos autores
  - [ ] Rotas protegidas
 
 ## Tecnologias usadas
