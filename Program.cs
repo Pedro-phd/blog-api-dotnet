@@ -9,8 +9,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddAutoMapper(typeof(PostMap));
-builder.Services.AddAutoMapper(typeof(AuthorMap));
+builder.Services.AddAutoMapper(typeof(GlobalMapper));
 builder.Services.AddScoped<IPostRepository, PostRepository>();
 builder.Services.AddScoped<IAuthorRepository, AuthorRepository>();
 
