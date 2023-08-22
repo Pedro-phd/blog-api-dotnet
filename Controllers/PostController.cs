@@ -37,11 +37,11 @@ public class PostController : ControllerBase
   [HttpPost("/post/new")]
   public async Task<IActionResult> NewPostAsync(PostRequest pr)
   {
-    var Post = _mapper.Map<Post>(pr);
     try
     {
-      await _postRepository.NewPost(pr);
-      return Ok(Post);
+      var post = await _postRepository.NewPost(pr);
+      return Created(new Uri($"Post/{post.Id}", UriKind.Relative), post);
+      // return Ok("OK");
 
     }
     catch (System.Exception err)
